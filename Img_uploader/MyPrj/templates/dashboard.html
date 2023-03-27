@@ -75,7 +75,11 @@
           box-shadow: none !important;
           outline: 0px !important;
       }
-
+      label {
+        display: inline-block;
+        width: 10px;
+        text-align: right;
+      }
   </style>
 </head>
 
@@ -90,8 +94,8 @@
 
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}                  
-                  
-                    {{form.as_p}}                   
+                    
+                    <label>{{form.as_p}} </label>                  
                     
                         <div class="vertical-center">
                             <button type="submit" >Submit new Post  </button>
